@@ -9,6 +9,15 @@ I WANT a back end for my e-commerce website that uses the latest technologies
 SO THAT my company can compete with other e-commerce companies
 ```
 
+## Installation
+
+`npm init`
+`mysql -u root`
+`source db/schema.sql`
+`show databases;`
+`exit`
+`npm start`
+
 ## Credits
 
 [Starter Code](https://github.com/coding-boot-camp/fantastic-umbrella)
