@@ -3,7 +3,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 //* The `/api/products` endpoint
 
-// Find all products
+// GET all products
 router.get('/', (req, res) => {
   Product.findAll({
     attributes: [
@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
   });
 });
 
-// get one product
+// GET one product
 router.get('/:id', (req, res) => {
   Product.findOne({
     where: {
@@ -59,7 +59,7 @@ router.get('/:id', (req, res) => {
   })
 });
 
-// create new product
+// CREATE a new product
 router.post('/', (req, res) => {
   Product.create({
     product_name: req.body.product_name,
@@ -88,9 +88,8 @@ router.post('/', (req, res) => {
   });
 });
 
-// update product
+// UPDATE a product by its ID
 router.put('/:id', (req, res) => {
-  // update product data
   Product.update(req.body, {
       where: {
         id: req.params.id,

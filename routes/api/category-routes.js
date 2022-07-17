@@ -22,7 +22,6 @@ router.get('/', (req, res) => {
         ]
       }
     ],
-    // order: [['created_at', 'DESC']]
   })
   .then(dbCategoryData => res.json(dbCategoryData))
   .catch(err => {
